@@ -4,11 +4,12 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static(__dirname + '/public'));
 
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 3001 
 
-require('./routes/htmlRoute.js')(app)
-// require('./routes/apiRoute.js')(app)
+require("./public/routes/htmlRoute")(app) 
+require('./public/routes/apiRoute')(app)
 
 app.listen(PORT, () => console.log(`App listening on Port ${PORT}`));
 
