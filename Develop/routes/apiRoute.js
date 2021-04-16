@@ -14,9 +14,11 @@ module.exports = (app) => {
         // push the new item to the db
         var newId = uniqid(); 
         let id = { "id": newId };
-        let newNotes = req.body;
+        let oldinfo = req.body;
+        let newNotes = Object.assign(oldinfo, id)
+
         console.log(id)
-        notesData.push(id)
+        console.log(newNotes)
         notesData.push(newNotes)
     })
 }
