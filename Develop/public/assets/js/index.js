@@ -40,15 +40,17 @@ const saveNote = (note) =>
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(note),
-  });
+  })
 
+    
 const deleteNote = (id) =>
   fetch(`/api/notes/${id}`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
     },
-  });
+  })
+  
 
 const renderActiveNote = () => {
   hide(saveNoteBtn);
@@ -65,15 +67,15 @@ const renderActiveNote = () => {
 };
 
 const handleNoteSave = () => {
+  console.log("saving note")
   const newNote = {
     title: noteTitle.value,
     text: noteText.value,
   };
-  console.log("saving note")
-  saveNote(newNote).then(() => {
-      console.log("its working")
-      // getAndRenderNotes();
-      // renderActiveNote();
+  saveNote(newNote)
+  .then(() => {
+      getAndRenderNotes();
+      renderActiveNote();
     });
 };
 
