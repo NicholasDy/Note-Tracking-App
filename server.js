@@ -13,5 +13,3 @@ require('./routes/apiRoute')(app)
 
 app.listen(PORT, () => console.log(`App listening on Port ${PORT}`));
 
-
-// have to link the two htmls correctly for the page to start working properly
