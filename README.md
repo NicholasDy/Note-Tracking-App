@@ -6,7 +6,7 @@
 The App is designed to basically save notes with a title and save it on a Node.js server so that it can be reviewed later. Taking in two inputs the code with save the data using express and node to have store it on a JSON file. When the data is saved it is displayed on the side bar which can be called back any anytime and edited when it is clicked. Future projects are to add functionality to the delete button so that it can be deleted from the database.
 
 ## Screenshots; 
-![picture](/assests/screenshot.PNG)
+![picture](Assets/screenshot.PNG)
 
 ## Code Style; HTML, CSS and Javascript/Node.js
 
